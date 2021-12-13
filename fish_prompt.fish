@@ -259,8 +259,11 @@ function fish_prompt
   prompt_virtual_env
   prompt_user
   prompt_dir
-  __exists hg;  and prompt_hg
-  __exists git; and prompt_git
-  __exists svn; and prompt_svn
+#  __exists hg;  and prompt_hg
+#  __exists git; and prompt_git
+#  __exists svn; and prompt_svn
+  type -q hg;  and prompt_hg
+  type -q git; and prompt_git
+  type -q svn; and prompt_svn
   prompt_finish
 end
